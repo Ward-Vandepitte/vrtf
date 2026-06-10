@@ -1,0 +1,89 @@
+{
+  "book": "deel_ii",
+  "n_pages": 691,
+  "totals": {
+    "G": 38199716,
+    "R": 21105258,
+    "B": 10538294,
+    "f1_pixelsum": 0.7071,
+    "f1_pagemean": 0.6746
+  },
+  "per_category": {
+    "unparsed": {
+      "G": 377874,
+      "R": 1747007,
+      "B": 0,
+      "share_of_R": 0.0828,
+      "share_of_B": 0.0,
+      "share_of_gap": 0.0552
+    },
+    "discarded": {
+      "G": 8,
+      "R": 124709,
+      "B": 0,
+      "share_of_R": 0.0059,
+      "share_of_B": 0.0,
+      "share_of_gap": 0.0039
+    },
+    "text": {
+      "G": 34933389,
+      "R": 12347971,
+      "B": 9240993,
+      "share_of_R": 0.5851,
+      "share_of_B": 0.8769,
+      "share_of_gap": 0.6823,
+      "delta_f1_if_perfect_pagemean": 0.2115,
+      "delta_f1_if_perfect_pages_present_mean": 0.2115,
+      "n_pages_present": 691,
+      "f1_if_perfect_pixelsum": 0.9095
+    },
+    "equation": {
+      "G": 2457052,
+      "R": 1379239,
+      "B": 902469,
+      "share_of_R": 0.0654,
+      "share_of_B": 0.0856,
+      "share_of_gap": 0.0721,
+      "delta_f1_if_perfect_pagemean": 0.0266,
+      "delta_f1_if_perfect_pages_present_mean": 0.042,
+      "n_pages_present": 438,
+      "f1_if_perfect_pixelsum": 0.7294
+    },
+    "table": {
+      "G": 260074,
+      "R": 149174,
+      "B": 159802,
+      "share_of_R": 0.0071,
+      "share_of_B": 0.0152,
+      "share_of_gap": 0.0098,
+      "delta_f1_if_perfect_pagemean": 0.0031,
+      "delta_f1_if_perfect_pages_present_mean": 0.0801,
+      "n_pages_present": 27,
+      "f1_if_perfect_pixelsum": 0.71
+    },
+    "figure": {
+      "G": 171319,
+      "R": 5357158,
+      "B": 235030,
+      "share_of_R": 0.2538,
+      "share_of_B": 0.0223,
+      "share_of_gap": 0.1767,
+      "delta_f1_if_perfect_pagemean": 0.0789,
+      "delta_f1_if_perfect_pages_present_mean": 0.1126,
+      "n_pages_present": 484,
+      "f1_if_perfect_pixelsum": 0.7698
+    }
+  },
+  "overlap": {
+    "px": 6858013,
+    "painted_px": 597889746,
+    "G": 264582,
+    "R": 183215,
+    "B": 292148,
+    "share_of_painted": 0.0115
+  },
+  "conventions": {
+    "counterfactual": "F1''=2(G+R_t)/(2(G+R_t)+(R-R_t)+(B-B_t)), first-order (ignores cross-type tau interactions)",
+    "attribution": "bbox paint priority discarded<text<equation<table<figure; heading merged into text; remainder=unparsed"
+  }
+}
