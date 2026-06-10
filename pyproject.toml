@@ -1,0 +1,57 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "vrtf"
+version = "0.1.0"
+description = "Visual Roundtrip Fidelity -- a reference-free quality metric for document OCR"
+readme = "README.md"
+license = { text = "Apache-2.0" }
+requires-python = ">=3.10"
+authors = [
+    { name = "Ward Vandepitte", email = "ward@vandepitte.ai" },
+]
+keywords = ["ocr", "quality", "evaluation", "document", "metric"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: Apache Software License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Scientific/Engineering :: Image Recognition",
+]
+dependencies = [
+    "numpy>=1.24",
+    "opencv-python-headless>=4.8",
+    "Pillow>=10.0",
+    "scikit-image>=0.22",
+    "scipy>=1.11",
+]
+
+[project.optional-dependencies]
+equations = ["pdfminer-six>=20221105"]  # pdflatex+poppler-utils must be installed as system packages
+figures = [
+    "matplotlib>=3.7",
+    "cairosvg>=2.7",
+]
+photos = [
+    "anthropic>=0.40",
+]
+all = ["vrtf[figures,equations,photos]"]
+dev = [
+    "pytest>=7.0",
+]
+
+[project.urls]
+Repository = "https://github.com/Ward-Vandepitte/vrtf"
+Paper = "https://arxiv.org/abs/XXXX.XXXXX"  # filled in at arXiv posting
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/vrtf"]
+include = ["src/vrtf/py.typed"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
