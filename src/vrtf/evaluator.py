@@ -10,6 +10,8 @@ scoring pipelines.
 
 from __future__ import annotations
 
+from typing import Any
+
 import gc
 import json
 import logging
@@ -1110,79 +1112,79 @@ class QualityEvaluationService:
     # Facade methods for backward compatibility
     # ------------------------------------------------------------------
 
-    def _binarize(self, *args, **kwargs):
+    def _binarize(self, *args: Any, **kwargs: Any) -> Any:
         return self._metrics.binarize(*args, **kwargs)
 
-    def _render_line_graph(self, *args, **kwargs):
+    def _render_line_graph(self, *args: Any, **kwargs: Any) -> Any:
         return self._figure.render_line_graph(*args, **kwargs)
 
-    def _align_graph_xcorr(self, *args, **kwargs):
+    def _align_graph_xcorr(self, *args: Any, **kwargs: Any) -> Any:
         return self._figure.align_graph_xcorr(*args, **kwargs)
 
-    def _compute_f1_overlap(self, *args, **kwargs):
+    def _compute_f1_overlap(self, *args: Any, **kwargs: Any) -> Any:
         return self._metrics.compute_f1_overlap(*args, **kwargs)
 
-    def _compute_ssim(self, *args, **kwargs):
+    def _compute_ssim(self, *args: Any, **kwargs: Any) -> Any:
         return Metrics.compute_ssim(*args, **kwargs)
 
-    def _build_band_mask(self, *args, **kwargs):
+    def _build_band_mask(self, *args: Any, **kwargs: Any) -> Any:
         return Metrics.build_band_mask(*args, **kwargs)
 
-    def _xcorr_shift(self, *args, **kwargs):
+    def _xcorr_shift(self, *args: Any, **kwargs: Any) -> Any:
         return xcorr_shift(*args, **kwargs)
 
-    def _shift_image(self, *args, **kwargs):
+    def _shift_image(self, *args: Any, **kwargs: Any) -> Any:
         return shift_image(*args, **kwargs)
 
-    def _render_text_in_bbox(self, *args, **kwargs):
+    def _render_text_in_bbox(self, *args: Any, **kwargs: Any) -> Any:
         return self._text.render_text_in_bbox(*args, **kwargs)
 
-    def _analyse_text_layout(self, *args, **kwargs):
+    def _analyse_text_layout(self, *args: Any, **kwargs: Any) -> Any:
         return self._text.analyse_text_layout(*args, **kwargs)
 
-    def _is_diagram_block(self, *args, **kwargs):
+    def _is_diagram_block(self, *args: Any, **kwargs: Any) -> Any:
         return self._text.is_diagram_block(*args, **kwargs)
 
-    def _render_equation_block(self, *args, **kwargs):
+    def _render_equation_block(self, *args: Any, **kwargs: Any) -> Any:
         return self._equation.render_equation_block(*args, **kwargs)
 
-    def _render_formula_pdflatex(self, *args, **kwargs):
+    def _render_formula_pdflatex(self, *args: Any, **kwargs: Any) -> Any:
         return self._equation.render_formula_pdflatex(*args, **kwargs)
 
-    def _composite_equation_text(self, *args, **kwargs):
+    def _composite_equation_text(self, *args: Any, **kwargs: Any) -> Any:
         return self._equation.composite_equation_text(*args, **kwargs)
 
-    def _render_table_in_bbox(self, *args, **kwargs):
+    def _render_table_in_bbox(self, *args: Any, **kwargs: Any) -> Any:
         return self._table.render_table_in_bbox(*args, **kwargs)
 
-    def _render_grid_in_bbox(self, *args, **kwargs):
+    def _render_grid_in_bbox(self, *args: Any, **kwargs: Any) -> Any:
         return self._table.render_grid_in_bbox(*args, **kwargs)
 
-    def _detect_table_grid_lines(self, *args, **kwargs):
+    def _detect_table_grid_lines(self, *args: Any, **kwargs: Any) -> Any:
         return self._table.detect_table_grid_lines(*args, **kwargs)
 
-    def _classify_table_cells(self, *args, **kwargs):
+    def _classify_table_cells(self, *args: Any, **kwargs: Any) -> Any:
         return self._table.classify_table_cells(*args, **kwargs)
 
-    def _parse_html_table(self, *args, **kwargs):
+    def _parse_html_table(self, *args: Any, **kwargs: Any) -> Any:
         return self._table.parse_html_table(*args, **kwargs)
 
-    def _parse_markdown_table(self, *args, **kwargs):
+    def _parse_markdown_table(self, *args: Any, **kwargs: Any) -> Any:
         return self._table.parse_markdown_table(*args, **kwargs)
 
-    def _get_font(self, *args, **kwargs):
+    def _get_font(self, *args: Any, **kwargs: Any) -> Any:
         return self._fonts.get_font(*args, **kwargs)
 
     def _get_bitmap_renderer(self):
         return self._fonts.get_bitmap_renderer()
 
-    def _compute_ink_overlap(self, *args, **kwargs):
+    def _compute_ink_overlap(self, *args: Any, **kwargs: Any) -> Any:
         return self._metrics.compute_ink_overlap(*args, **kwargs)
 
-    def _get_font_advance(self, *args, **kwargs):
+    def _get_font_advance(self, *args: Any, **kwargs: Any) -> Any:
         return FontCache.get_font_advance(*args, **kwargs)
 
-    def _find_font_size_for_pitch(self, *args, **kwargs):
+    def _find_font_size_for_pitch(self, *args: Any, **kwargs: Any) -> Any:
         return self._fonts.find_font_size_for_pitch(*args, **kwargs)
 
     def _get_hybrid_renderer(self):

@@ -19,6 +19,11 @@ from vrtf.metric import Metrics, xcorr_shift, shift_image
 
 logger = logging.getLogger(__name__)
 
+# LLM judge model for score_photo_description. Named so the model used is a single
+# recorded value; pinned to Sonnet 4.6 (a cheap, temperature-accepting model for this
+# 0-10 rating call). Bump deliberately if the rating quality/behaviour needs to change.
+_PHOTO_JUDGE_MODEL = "claude-sonnet-4-6"
+
 
 class FigureRenderer:
     """Render figure blocks (line graphs, SVG drawings) and score photo descriptions.
@@ -324,9 +329,14 @@ class FigureRenderer:
             img_b64 = base64.standard_b64encode(buf.getvalue()).decode("ascii")
 
             client = anthropic.Anthropic(api_key=api_key, max_retries=0)
+            # #1508: pin temperature=0 and record the model so this LLM-judged score is
+            # reproducible (default temperature gave run-to-run variance feeding ink_overlap).
+            # Sonnet 4.6 still accepts temperature (Sonnet 5 / Opus 4.7+ would 400 on it).
+            logger.debug("photo_description_judge model=%s temperature=0", _PHOTO_JUDGE_MODEL)
             message = client.messages.create(
-                model="claude-sonnet-4-6",
+                model=_PHOTO_JUDGE_MODEL,
                 max_tokens=50,
+                temperature=0,
                 messages=[{
                     "role": "user",
                     "content": [
