@@ -9,8 +9,8 @@ is **parser-agnostic** (any block-level OCR output), and stays discriminative af
 character error rates saturate.
 
 Companion code for the paper *Beyond Edit Distance: Reference-Free
-Structural-Reconstruction Fidelity for Document OCR* (Vandepitte, 2026 — arXiv link
-follows with the posting).
+Structural-Reconstruction Fidelity for Document OCR* (Vandepitte, 2026; submitted to
+engrXiv, DOI to follow on posting).
 
 ## How it works (the honest protocol)
 
@@ -139,10 +139,10 @@ on adversarial documents in a privileged environment.
 
 ```
 Vandepitte, W. (2026). Beyond Edit Distance: Reference-Free
-Structural-Reconstruction Fidelity for Document OCR. arXiv preprint.
+Structural-Reconstruction Fidelity for Document OCR. engrXiv preprint.
 ```
 
-(Exact arXiv identifier added with the v1 posting.)
+(engrXiv DOI added on posting.)
 
 ## License
 

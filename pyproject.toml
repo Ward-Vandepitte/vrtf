@@ -47,7 +47,7 @@ dev = [
 
 [project.urls]
 Repository = "https://github.com/Ward-Vandepitte/vrtf"
-Paper = "https://arxiv.org/abs/XXXX.XXXXX"  # filled in at arXiv posting
+Paper = "https://engrxiv.org/"  # engrXiv preprint; exact DOI/URL filled in on posting
 
 [tool.hatch.build.targets.wheel]
 packages = ["src/vrtf"]
