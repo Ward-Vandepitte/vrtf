@@ -129,6 +129,18 @@ are uncorrelated per page. See the paper for the decomposition of the gap by con
 type, the capability ("avenue") runs, and the measured score inflation of
 source-peeking rendering.
 
+## Data and a runnable demo
+
+- **Per-page score data** behind the paper's tables (CC BY 4.0):
+  [kaggle.com/datasets/wardvandepitte/vrtf-ocr-structural-fidelity-scores](https://www.kaggle.com/datasets/wardvandepitte/vrtf-ocr-structural-fidelity-scores)
+  — the source pages are copyrighted and not redistributable, so only the derived
+  per-page scores are published, keyed to page indices.
+- **Runnable demo corpus + starter notebook** on a public-domain document
+  (Wattjes, *Constructie van gebouwen* III, 1930s):
+  [kaggle.com/datasets/wardvandepitte/vrtf-ocr-demo-corpus-wattjes](https://www.kaggle.com/datasets/wardvandepitte/vrtf-ocr-demo-corpus-wattjes)
+  — page images, a MinerU content-list, reference scores, and a notebook that
+  reproduces a VRTF scoring run end-to-end with no API keys.
+
 ## Security note
 
 Equation rendering shells out to `pdflatex` with `--no-shell-escape` and 5-second
